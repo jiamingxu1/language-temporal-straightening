@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+
+# Large/local analysis data
+*.h5
+*.hdf5
+*.hf5
+*.npy
+*.npz
+*.nii
+*.nii.gz
+data/audios
+data/fsmat
+data/mri
+data/rois
+data/surfaces
+
+# Model/cache files
+.cache/
+huggingface/
