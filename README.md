@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 ### 4. Download the fMRI data
 
-The anonymized fMRI data required to reproduce the analyses are available here:
+The anonymized fMRI dataset is large and is therefore hosted separately on Box rather than in this repository. The fMRI data required to reproduce the analyses are available here:
 
 https://utexas.box.com/s/ca5ydunq876o5ru7u8yhf3yyt9l77mad
 
