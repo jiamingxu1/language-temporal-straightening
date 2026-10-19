@@ -2,7 +2,7 @@
 % on Henaff et al. (2021).
 %
 % Inputs:
-%   mean_lambda - (n_neurons x n_bins) Mean of the modulated rate function
+%    y - (n_neurons x n_bins) Rate vectors after the variance-stabilizing transformation (VST)
 %
 % Outputs:
 %   c - (1 x n_bins - 2) Curvature of neural embeddings 
