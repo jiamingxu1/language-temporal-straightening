@@ -136,4 +136,4 @@ requirements.txt
 
 Code for the spiking-neuron population simulations can be found in the `spiking/` directory. 
 
-`main_simulation.m` runs the simulation to reproduce Figures 7d) and 7e). To run the code, you have to navigate _inside_ the `spiking/` folder and run the code from there. A MATLAB version of at least R2025a is recommended. 
+`main_simulation.m` runs the simulation to reproduce Figures 7d) and 7e) (need to update the `n_neuron` parameter). To run the code, you have to navigate _inside_ the `spiking/` folder and run the code from there. A MATLAB version of at least R2025a is recommended. 
