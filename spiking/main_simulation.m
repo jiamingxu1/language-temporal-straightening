@@ -33,10 +33,10 @@ tau_g = [0.002, 0.02]; % time scale of gain (in seconds)
 q_g = 2;               % power law exponent of gain covariance function
 
 %% Simulate neural responses
-% loop over hierarchy of neural populations
 c_slow_gain = zeros(1, numel(tau_f));
 c_fast_gain = zeros(1, numel(tau_f));
 
+% loop over hierarchy of neural populations
 for itau = 1:numel(tau_f)
     fprintf('Running simulation for tau_f value number %d/%d\n\n', itau, numel(tau_f))
     
