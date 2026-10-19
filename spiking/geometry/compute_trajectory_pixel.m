@@ -12,15 +12,9 @@ function c = compute_trajectory_pixel(frame_mat)
     
     % compute local trajectory
     v = diff(frame_mat, 1, 3);
-    v_hat = zeros(size(v, 1) * size(v, 2), size(v, 3));
+    v_hat = reshape(v, [], n_frames-1) ./ vecnorm(reshape(v, [], n_frames-1), 2, 1);
     
-    for iframe = 1:size(v, 3)
-        v_t = v(:, :, iframe);
-        v_hat(:, iframe) = v_t(:) / norm(v_t(:));
-    end
-    
-    c = zeros(n_frames - 2, 1);
-    for iframe = 2:n_frames - 1
-        c(iframe-1) = acos(dot(v_hat(:, iframe-1), v_hat(:, iframe)));
-    end
+    v_hat1 = v_hat(:, 1:n_frames-2);
+    v_hat2 = v_hat(:, 2:n_frames-1);
+    c = acos(dot(v_hat1, v_hat2));
 end
