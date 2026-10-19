@@ -13,8 +13,6 @@ addpath("statistics/")
 %% Simulate hierarchy of neural populations
 n_frames = 11;        % number of video frames
 frame_duration = 0.2; % duration over with a single frame was shown (in seconds)
-n_trials = 1;         % number of trials (1 trial is enough when using t
-is_analytical = true; % estimate curvature based on analytical solutions or simulated spike counts
 
 % create time series
 T = (n_frames * frame_duration);  % duration (in seconds)
@@ -44,8 +42,8 @@ for itau = 1:numel(tau_f)
     mean_frange = []; 
 
     % simulate tuning curves
-    [tuning_curves_fast_gain, ~, lambda_fast_gain] = compute_CMP(n_trials, x, n_neurons, rho_f, tau_f(itau), rho_g, tau_g(1), q_g, mean_frange);
-    [tuning_curves_slow_gain, ~, lambda_slow_gain] = compute_CMP(n_trials, x, n_neurons, rho_f, tau_f(itau), rho_g, tau_g(2), q_g, mean_frange);
+    [tuning_curves_fast_gain, ~, lambda_fast_gain] = compute_CMP(1, x, n_neurons, rho_f, tau_f(itau), rho_g, tau_g(1), q_g, mean_frange);
+    [tuning_curves_slow_gain, ~, lambda_slow_gain] = compute_CMP(1, x, n_neurons, rho_f, tau_f(itau), rho_g, tau_g(2), q_g, mean_frange);
 
     % get analytical mean and variance
     [mean_lambda_fast_gain, ~, ~, var_gain_fast_gain] = mean_var_CMP(tuning_curves_fast_gain, rho_g, dt, T, bin_size, tau_g(1), q_g);
