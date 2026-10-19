@@ -11,7 +11,6 @@ addpath("geometry")
 addpath("statistics/")
 
 %% Simulate hierarchy of neural populations
-
 n_frames = 11;        % number of video frames
 frame_duration = 0.2; % duration over with a single frame was shown (in seconds)
 n_trials = 1;         % number of trials (1 trial is enough when using t
@@ -34,7 +33,6 @@ tau_g = [0.002, 0.02]; % time scale of gain (in seconds)
 q_g = 2;               % power law exponent of gain covariance function
 
 %% Simulate neural responses
-
 % loop over hierarchy of neural populations
 c_slow_gain = zeros(1, numel(tau_f));
 c_fast_gain = zeros(1, numel(tau_f));
