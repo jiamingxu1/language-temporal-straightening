@@ -106,6 +106,18 @@ analyses/
 └── wavlm/
     └── wavLM.ipynb
 
+spiking/
+├── geometry/
+│   ├── compute_curvature.m
+│   ├── compute_trajectory_pixel.m
+├── statistics/
+│   ├── compute_CMP.m
+│   ├── compute_VST.m
+│   ├── epl_kernel.m
+│   ├── mean_var_CMP.m
+│   ├── rbf_kernel.m
+└── main_simulation.m
+
 src/
 ├── AR_sim_core.py
 └── fmri_core.py
@@ -122,6 +134,4 @@ requirements.txt
 
 ## Spiking-neuron simulations
 
-Code for the spiking-neuron population simulations is maintained separately at:
-
-https://github.com/nguyen-td/timescales_curvature
+Code for the spiking-neuron population simulations are in the `spiking/` directory. 
